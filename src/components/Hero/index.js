@@ -5,14 +5,14 @@ const Hero = () => {
   return (
     <section className="hero">
       <h1 className="hero-title">
-        <div>
+        <div data-hidden>
           <span>H</span>
           <span>a</span>
           <span>d</span>
           <span>a</span>
           <span>s</span>
         </div>
-        <div>
+        <div data-hidden>
           <span>S</span>
           <span>t</span>
           <span>u</span>

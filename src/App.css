@@ -128,7 +128,7 @@ p {
   width: 37.4rem;
   height: auto;
   top: 16.8rem;
-  right: 47.8rem;
+  right: 46rem;
 }
 .hero img:nth-child(5) {
   width: 35.1rem;
@@ -166,15 +166,16 @@ p {
   max-width: 44ch;
 }
 
-.fullwidth-image {
+.full-width-image {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
   clip-path: polygon(5% 10%, 95% 10%, 95% 90%, 5% 90%);
+  background: #c2fff1;
 }
 
-.fullwidth-image img {
+.full-width-image img {
   position: absolute;
   inset: 0;
   object-fit: cover;
@@ -182,7 +183,7 @@ p {
   width: 100%;
 }
 
-.fullwidth-image-overlay {
+.full-width-image-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -190,22 +191,22 @@ p {
   opacity: 0;
 }
 
-.fullwidth-image-text {
+.full-width-image-text {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  color: white;
+  color: #ffffff;
 }
 
-.fullwidth-image h2 {
-  font-size: 6.4rem;
+.full-width-image h2 {
+  font-size: 10rem;
   margin-bottom: 1.6rem;
 }
 
-.fullwidth-image p {
-  font-size: 2.4rem;
+.full-width-image p {
+  font-size: 5rem;
   max-width: 48ch;
 }
 
@@ -232,4 +233,16 @@ button {
   background-color: #000000;
   opacity: 0.5;
   transform-origin: center right;
+}
+
+.footer {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer header {
+  color: #000000;
+  font-size: 36px;
 }

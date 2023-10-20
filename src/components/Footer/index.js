@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer>
-      <form>Commision your next art piece</form>
+    <footer className='footer'>
+      <header>Commision your next art piece</header>
     </footer>
   )
 }
