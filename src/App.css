@@ -22,6 +22,10 @@ body {
   background-color: white;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -64,6 +68,7 @@ html.lenis {
 section {
   width: 100%;
   min-height: 100vh;
+  background: black;
 }
 
 h1,
@@ -84,7 +89,7 @@ p {
   display: grid;
   place-items: center;
   height: 129.8rem;
-  background: #c2fff1;
+  background: black;
 }
 
 .hero-title {
@@ -155,7 +160,7 @@ p {
   background: #000000;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .text-block p {
@@ -166,56 +171,16 @@ p {
   max-width: 44ch;
 }
 
-.full-width-image {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  clip-path: polygon(5% 10%, 95% 10%, 95% 90%, 5% 90%);
-  background: #c2fff1;
-}
+/* slider */
 
-.full-width-image img {
-  position: absolute;
-  inset: 0;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.full-width-image-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background-color: black;
-  opacity: 0;
-}
-
-.full-width-image-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  color: #ffffff;
-}
-
-.full-width-image h2 {
-  font-size: 10rem;
-  margin-bottom: 1.6rem;
-}
-
-.full-width-image p {
-  font-size: 5rem;
-  max-width: 48ch;
-}
 
 button {
   border: none;
-  background-color: black;
+  background-color: white;
   padding: 1.6rem 4.8rem;
+  margin: 5rem;
   font-size: 2.4rem;
-  color: white;
+  color: black;
   border-radius: 8px;
   font-family: inherit;
   letter-spacing: -0.01em;

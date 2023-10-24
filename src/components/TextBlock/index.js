@@ -25,6 +25,7 @@ const TextBlock = () => {
           <p>Artifacts of dreams scattered across the studio.</p>
         </div>
       </div>
+      <button>Explore Works</button>
     </section>
   );
 };

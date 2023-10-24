@@ -1,23 +1,23 @@
-import './App.css';
-import React, { useEffect } from "react"
-import AppLenis from './helpers';
-import Hero from './components/Hero';
-import TextBlock from './components/TextBlock';
-import FullWidthImage from './components/FullWidthImage';
-import Footer from './components/Footer';
+import "./App.css";
+import React, { useEffect } from "react";
+import MainAnimations from "./helpers/mainAnimations";
+import Hero from "./components/Hero";
+import TextBlock from "./components/TextBlock";
+import Slider from "./components/Slider";
+import Footer from "./components/Footer";
 
 function App() {
-
   useEffect(() => {
-    const myApp = new AppLenis();
+    const myApp = new MainAnimations();
     
-  }, []); 
+  }, []); //
+
   return (
     <>
-    <Hero />
-    <TextBlock />
-    <FullWidthImage />
-    <Footer />
+      <Hero />
+      <TextBlock />
+      <Slider />
+      <Footer />
     </>
   );
 }
