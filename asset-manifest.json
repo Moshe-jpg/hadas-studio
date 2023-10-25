@@ -1,23 +1,40 @@
 {
   "files": {
-    "main.css": "/static/css/main.693e61dc.css",
-    "main.js": "/static/js/main.39d0970a.js",
+    "main.css": "/static/css/main.8471117e.css",
+    "main.js": "/static/js/main.a046d403.js",
     "static/js/787.2e8e63b8.chunk.js": "/static/js/787.2e8e63b8.chunk.js",
     "static/media/rabbit.JPG": "/static/media/rabbit.5cf9181fd4ffdfbd4bd5.JPG",
     "static/media/rabbits.JPG": "/static/media/rabbits.20490935d14a7d3ab719.JPG",
+    "static/media/rabbit.webp": "/static/media/rabbit.1186160e01666f1e49b9.webp",
+    "static/media/shoes.webp": "/static/media/shoes.675ca0340911af98f7e1.webp",
     "static/media/butterfly.JPG": "/static/media/butterfly.517bae13b6df362de50a.JPG",
     "static/media/car.JPG": "/static/media/car.2bb4aa0b7ddca01b0add.JPG",
+    "static/media/rabbits.webp": "/static/media/rabbits.4a67c7b2a03435486082.webp",
     "static/media/girl.JPG": "/static/media/girl.c9f921a947cc82e636f8.JPG",
     "static/media/sailboat.JPG": "/static/media/sailboat.bea94bc2a6c73209906f.JPG",
+    "static/media/butterfly.webp": "/static/media/butterfly.6e174378c28ea7c5ce8d.webp",
+    "static/media/sailboat.webp": "/static/media/sailboat.faacf0614d1fa854f6df.webp",
+    "static/media/car.webp": "/static/media/car.5e31c61381f722451b9d.webp",
+    "static/media/spongebob.webp": "/static/media/spongebob.296d0384f3119a0c131d.webp",
+    "static/media/pineapple.webp": "/static/media/pineapple.61fb9eb99b246e8ef393.webp",
     "static/media/bebe.JPG": "/static/media/bebe.3933b50cc559713ec0ee.JPG",
-    "static/media/90s-girl.JPG": "/static/media/90s-girl.60c27d63bd8a8a4f33ea.JPG",
+    "static/media/girl.webp": "/static/media/girl.d59801422363167dda10.webp",
+    "static/media/bebe.webp": "/static/media/bebe.6ecd3c5d9025ddbd2015.webp",
+    "static/media/invitation.webp": "/static/media/invitation.ca00d66f2cfc8db5b628.webp",
+    "static/media/yam-suf.webp": "/static/media/yam-suf.ad46b0a84dd3afaf2d36.webp",
+    "static/media/tiger.webp": "/static/media/tiger.5416c283d96d0a987211.webp",
+    "static/media/chlorine.webp": "/static/media/chlorine.f09003014b643c825a52.webp",
+    "static/media/butterfly-skeleton.webp": "/static/media/butterfly-skeleton.128258d7c71527dce035.webp",
+    "static/media/girl-sketch.webp": "/static/media/girl-sketch.6f2c3b110e72766fb0c8.webp",
+    "static/media/boots-sketch.webp": "/static/media/boots-sketch.9aaaca7dce90d73e51e8.webp",
+    "static/media/90s-girl.webp": "/static/media/90s-girl.9379d808a71f6c14a6b5.webp",
     "index.html": "/index.html",
-    "main.693e61dc.css.map": "/static/css/main.693e61dc.css.map",
-    "main.39d0970a.js.map": "/static/js/main.39d0970a.js.map",
+    "main.8471117e.css.map": "/static/css/main.8471117e.css.map",
+    "main.a046d403.js.map": "/static/js/main.a046d403.js.map",
     "787.2e8e63b8.chunk.js.map": "/static/js/787.2e8e63b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.693e61dc.css",
-    "static/js/main.39d0970a.js"
+    "static/css/main.8471117e.css",
+    "static/js/main.a046d403.js"
   ]
 }
