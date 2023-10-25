@@ -17,11 +17,12 @@ export const createGalleryAnimation = (root) => {
           end: "+=3000",
           onUpdate: self => {
             let skewAmount = self.getVelocity() / 200;
-            let scaleAmount = 1 + Math.abs(self.getVelocity) / 20000;
+            let scaleAmount = 1 + Math.abs(self.getVelocity()) / 20000;
   
             slides.forEach((slide) => {
               gsap.to(slide.querySelector(".skew-group"), {
                 skewX: skewAmount,
+                scaleY: scaleAmount,
                 overwrite: true,
                 ease: Power3.easeOut
               })
@@ -31,6 +32,7 @@ export const createGalleryAnimation = (root) => {
             slides.forEach((slide) => {
               gsap.to(slide.querySelector(".skew-group"), {
                 skewX: 0,
+                scaleY: 1,
                 duration: 0.5,
                 ease: Power3.easeOut
               })

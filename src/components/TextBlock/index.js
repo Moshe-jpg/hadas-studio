@@ -1,6 +1,13 @@
 import React from "react";
 
 const TextBlock = () => {
+  const scrollToFooter = () => {
+    const footerElement = document.querySelector(".footer");
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="text-block">
       <div className="container">
@@ -25,7 +32,9 @@ const TextBlock = () => {
           <p>Artifacts of dreams scattered across the studio.</p>
         </div>
       </div>
-      <button>Explore Works</button>
+      <button onClick={() => {
+        scrollToFooter();
+      }}>Start A Project</button>
     </section>
   );
 };
