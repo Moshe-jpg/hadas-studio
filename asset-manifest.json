@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hadas-studio/static/css/main.693e61dc.css",
+    "main.js": "/hadas-studio/static/js/main.03042b2a.js",
+    "static/js/787.2e8e63b8.chunk.js": "/hadas-studio/static/js/787.2e8e63b8.chunk.js",
+    "static/media/rabbit.JPG": "/hadas-studio/static/media/rabbit.5cf9181fd4ffdfbd4bd5.JPG",
+    "static/media/rabbits.JPG": "/hadas-studio/static/media/rabbits.20490935d14a7d3ab719.JPG",
+    "static/media/butterfly.JPG": "/hadas-studio/static/media/butterfly.517bae13b6df362de50a.JPG",
+    "static/media/car.JPG": "/hadas-studio/static/media/car.2bb4aa0b7ddca01b0add.JPG",
+    "static/media/girl.JPG": "/hadas-studio/static/media/girl.c9f921a947cc82e636f8.JPG",
+    "static/media/sailboat.JPG": "/hadas-studio/static/media/sailboat.bea94bc2a6c73209906f.JPG",
+    "static/media/bebe.JPG": "/hadas-studio/static/media/bebe.3933b50cc559713ec0ee.JPG",
+    "static/media/90s-girl.JPG": "/hadas-studio/static/media/90s-girl.60c27d63bd8a8a4f33ea.JPG",
+    "index.html": "/hadas-studio/index.html",
+    "main.693e61dc.css.map": "/hadas-studio/static/css/main.693e61dc.css.map",
+    "main.03042b2a.js.map": "/hadas-studio/static/js/main.03042b2a.js.map",
+    "787.2e8e63b8.chunk.js.map": "/hadas-studio/static/js/787.2e8e63b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.693e61dc.css",
+    "static/js/main.03042b2a.js"
+  ]
+}
