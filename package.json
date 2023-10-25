@@ -1,6 +1,6 @@
 {
+  "homepage": "http://hadas.studio",
   "name": "hadas-studio",
-  "homepage": "http://moshe-jpg.github.io/hadas-studio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
