@@ -6,7 +6,6 @@ class MainAnimations {
   constructor() {
     this.heroImages = [...document.querySelectorAll(".hero-images img")];
     this.texts = [...document.querySelectorAll(".text-effect")];
-
     this._initialize();
     this._render();
   }

@@ -19,14 +19,14 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background-color: black;
 }
 
 *::-webkit-scrollbar {
   display: none;
 }
 
-img {
+.hero-images img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -160,7 +160,7 @@ p {
   background: #000000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .text-block p {
@@ -173,6 +173,40 @@ p {
 
 /* slider */
 
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6em;
+}
+
+.gallery img {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.slider-section {
+  height: 100vh;
+  min-height: unset;
+  overflow: hidden;
+}
+
+.scroll-container {
+  height: 100vh;
+  width: 300vw;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+.slide {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 button {
   border: none;
@@ -191,7 +225,7 @@ button {
 .text-overlay {
   display: block;
   position: absolute;
-  height: 101%;
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
@@ -208,6 +242,6 @@ button {
 }
 
 .footer header {
-  color: #000000;
+  color: white;
   font-size: 36px;
 }
