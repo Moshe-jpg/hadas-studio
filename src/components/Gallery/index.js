@@ -1,28 +1,110 @@
-import React, { useLayoutEffect, useRef } from 'react';
-import { createGalleryAnimation } from '../../galleryFunc';
-import girl90s from "../../assets/90s-girl.JPG";
+import React, { useLayoutEffect, useRef } from "react";
+import { createGalleryAnimation } from "../../galleryFunc";
+import girl90s from "../../assets/90s-girl.webp";
+import bebe from "../../assets/bebe.webp";
+import bootsSketch from "../../assets/boots-sketch.webp";
+import butterfly from "../../assets/butterfly.webp";
+import butterflySkeleton from "../../assets/butterfly-skeleton.webp";
+import car from "../../assets/car.webp";
+import chlorine from "../../assets/chlorine.webp";
+// import fullWidthImage from "../../assets/full-width-image.webp";
+import girlSketchImage from "../../assets/girl-sketch.webp";
+import girl from "../../assets/girl.webp";
+import invitation from "../../assets/invitation.webp";
+import pineapple from "../../assets/pineapple.webp";
+import rabbit from "../../assets/rabbit.webp";
+import rabbits from "../../assets/rabbits.webp";
+import sailboat from "../../assets/sailboat.webp";
+import shoes from "../../assets/shoes.webp";
+import spongebob from "../../assets/spongebob.webp";
+import tiger from "../../assets/tiger.webp";
+import yamSuf from "../../assets/yam-suf.webp";
 
 const Slider = () => {
-  const galleryImages = [
+  const galleryImages1 = [
     {
       imgSrc: girl90s,
-      altTag: "",
-      caption: "90s Girl",
+      altTag: "Girl form the 90s",
     },
     {
-      imgSrc: girl90s,
-      altTag: "",
-      caption: "90s Girl",
+      imgSrc: bebe,
+      altTag: "Baby",
     },
     {
-      imgSrc: girl90s,
-      altTag: "",
-      caption: "90s Girl",
+      imgSrc: bootsSketch,
+      altTag: "boots sketch",
+    },
+  ];
+  const galleryImages2 = [
+    {
+      imgSrc: butterflySkeleton,
+      altTag: "butterfly skeleton sketch",
     },
     {
-      imgSrc: girl90s,
-      altTag: "",
-      caption: "90s Girl",
+      imgSrc: car,
+      altTag: "car",
+    },
+    {
+      imgSrc: girlSketchImage,
+      altTag: "girl",
+    },
+  ];
+  const galleryImages3 = [
+    {
+      imgSrc: pineapple,
+      altTag: "pineapple",
+    },
+    {
+      imgSrc: sailboat,
+      altTag: "sailboat",
+    },
+    {
+      imgSrc: girl,
+      altTag: "girl",
+    },
+  ];
+  const galleryImages4 = [
+    {
+      imgSrc: rabbit,
+      altTag: "rabbit",
+    },
+    {
+      imgSrc: rabbits,
+      altTag: "rabbits",
+    },
+
+    {
+      imgSrc: shoes,
+      altTag: "shoes",
+    },
+  ];
+  const galleryImages5 = [
+    {
+      imgSrc: spongebob,
+      altTag: "spongebob",
+    },
+    {
+      imgSrc: tiger,
+      altTag: "tiger",
+    },
+    {
+      imgSrc: yamSuf,
+      altTag: "yam suf",
+    },
+  ];
+
+  const galleryImages6 = [
+    {
+      imgSrc: butterfly,
+      altTag: "butterfly",
+    },
+    {
+      imgSrc: invitation,
+      altTag: "invitation",
+    },
+    {
+      imgSrc: chlorine,
+      altTag: "chlorine",
     },
   ];
 
@@ -31,10 +113,8 @@ const Slider = () => {
   useLayoutEffect(() => {
     const ctx = createGalleryAnimation(galleryRef.current);
 
-    return () => ctx.revert(); // This will clean up the animations when the component unmounts
+    return () => ctx.revert(); 
   }, []);
-
-
 
   return (
     <div className="scroll-wrapper" ref={galleryRef}>
@@ -42,7 +122,7 @@ const Slider = () => {
         <div className="scroll-container">
           <div className="slide">
             <div className="skew-group gallery">
-              {galleryImages.map((gallery, i) => {
+              {galleryImages1.map((gallery, i) => {
                 return (
                   <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
                 );
@@ -51,7 +131,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <div className="skew-group gallery">
-              {galleryImages.map((gallery, i) => {
+              {galleryImages2.map((gallery, i) => {
                 return (
                   <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
                 );
@@ -60,7 +140,34 @@ const Slider = () => {
           </div>
           <div className="slide">
             <div className="skew-group gallery">
-              {galleryImages.map((gallery, i) => {
+              {galleryImages3.map((gallery, i) => {
+                return (
+                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
+                );
+              })}
+            </div>
+          </div>
+          <div className="slide">
+            <div className="skew-group gallery">
+              {galleryImages4.map((gallery, i) => {
+                return (
+                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
+                );
+              })}
+            </div>
+          </div>
+          <div className="slide">
+            <div className="skew-group gallery">
+              {galleryImages5.map((gallery, i) => {
+                return (
+                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
+                );
+              })}
+            </div>
+          </div>
+          <div className="slide">
+            <div className="skew-group gallery">
+              {galleryImages6.map((gallery, i) => {
                 return (
                   <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
                 );
