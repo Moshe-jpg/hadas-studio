@@ -41,10 +41,6 @@ body {
   object-fit: cover;
 }
 
-[data-hidden] {
-  opacity: 0;
-}
-
 /* lenis */
 
 html.lenis {
@@ -208,7 +204,7 @@ p {
 
 .scroll-container {
   height: 100vh;
-  width: 600vw;
+  width: fit-content;
   display: flex;
   flex-direction: row;
   overflow-x: hidden;
@@ -231,6 +227,7 @@ button {
   border-radius: 8px;
   font-family: inherit;
   letter-spacing: -0.01em;
+  z-index: 300;
 }
 .text-effect {
   position: relative;
@@ -238,7 +235,7 @@ button {
 .text-overlay {
   display: block;
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
@@ -269,7 +266,7 @@ form {
   border: 1px solid var(--light-transparent);
   border-radius: 15px;
   padding: 10px;
-  margin: 25px 20px 10px;
+  margin: 25px 20px 10vh;
 }
 
 form .inputBox-container {
@@ -338,6 +335,96 @@ form .inputBoxBtn:hover {
   color: var(--white);
 }
 
+@media screen and (min-width: 999.1px) {
+  [data-hidden] {
+    opacity: 0;
+  }
+}
+
+/* Media Query for Mobile Screens (below 768px) */
+@media screen and (max-width: 999px) {
+  .slide img {
+    width: 90vw; /* Each image takes up 100% of the viewport width */
+  }
+}
+
+@media screen and (max-width: 999px) {
+
+  .hero {
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .hero-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero img {
+    position: relative;
+  }
+
+  .dark-overlay {
+    display: initial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background: var(--dark-transparent);
+    z-index: 3;
+  }
+
+  .hero-images img {
+    display: none;clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+  }
+  
+  .hero img:nth-child(1) {
+    display: initial;
+    width: 100%;
+    height: 25vh;
+    top: unset;
+    left: unset;
+    right: unset;
+    left: unset;
+  }
+  .hero img:nth-child(2) {
+    display: initial;
+    width: 100%;
+    height: 25vh;
+    top: unset;
+    left: unset;
+    right: unset;
+    left: unset;
+  }
+  .hero img:nth-child(3) {
+    display: initial;
+    width: 100%;
+    height: 25vh;
+    top: unset;
+    left: unset;
+    right: unset;
+    left: unset;
+  }
+  .hero img:nth-child(4) {
+    display: initial;
+    width: 100%;
+    height: 25vh;
+    top: unset;
+    left: unset;
+    right: unset;
+    left: unset;
+  }
+  
+}
+
 @media screen and (max-width: 768px) {
   .hero {
     display: flex;
@@ -350,50 +437,6 @@ form .inputBoxBtn:hover {
 
   .hero-title {
     font-size: 32rem;
-  }
-
-  .dark-overlay {
-    display: initial;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--dark-transparent);
-    z-index: 3;
-  }
-
-  .hero-images img {
-    display: none;
-  }
-  
-  .hero img:nth-child(1) {
-    display: initial;
-    width: 100%;
-    height: 25%;
-    top: 0;
-    left: 0;
-  }
-  .hero img:nth-child(2) {
-    display: initial;
-    width: 100%;
-    height: 25%;
-    top: 25vh;
-    left: 0;
-  }
-  .hero img:nth-child(3) {
-    display: initial;
-    width: 100%;
-    height: 25%;
-    top: 50vh;
-    left: 0;
-  }
-  .hero img:nth-child(4) {
-    display: initial;
-    width: 100%;
-    height: 25%;
-    top: 75vh;
-    left: 0;
   }
 
   .text-block {

@@ -62,16 +62,13 @@ const HeroImages = () => {
   ];
 
   return (
-    <>
-      <div className="dark-overlay"></div>
-      <div className="hero-images">
-        {images.map((img, i) => {
-          return (
-            <img key={i} src={img.imgSrc} alt={img.altTag} data-hidden></img>
-          );
-        })}
-      </div>
-    </>
+    <div className="hero-images">
+      {images.map((img, i) => {
+        return (
+          <img key={i} src={img.imgSrc} alt={img.altTag} data-hidden></img>
+        );
+      })}
+    </div>
   );
 };
 

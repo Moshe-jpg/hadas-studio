@@ -4,6 +4,7 @@ import HeroImages from "../HeroImages";
 const Hero = () => {
   return (
     <section className="hero">
+      <div className="dark-overlay"></div>
       <h1 className="hero-title">
         <div data-hidden>
           <span>H</span>

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import { createGalleryAnimation } from "../../galleryFunc";
 import girl90s from "../../assets/90s-girl.webp";
 import bebe from "../../assets/bebe.webp";
@@ -108,72 +108,67 @@ const Slider = () => {
     },
   ];
 
+  const groupImagesForSlides = (images, screenSize) => {
+    let groupSize;
+
+    if (screenSize > 999) {
+      groupSize = 3; // 3 images per slide for screens wider than 999px
+    } else {
+      groupSize = 1; // 1 image per slide for screens smaller than 768px
+    }
+
+    const groupedImages = [];
+    for (let i = 0; i < images.length; i += groupSize) {
+      groupedImages.push(images.slice(i, i + groupSize));
+    }
+
+    return groupedImages;
+  };
+
   const galleryRef = useRef();
 
   useLayoutEffect(() => {
     const ctx = createGalleryAnimation(galleryRef.current);
 
-    return () => ctx.revert(); 
+    return () => ctx.revert();
   }, []);
+
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenSize(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const allImages = [
+    galleryImages1,
+    galleryImages2,
+    galleryImages3,
+    galleryImages4,
+    galleryImages5,
+    galleryImages6,
+  ];
+  const groupedImages = allImages.flatMap((images) =>
+    groupImagesForSlides(images, screenSize)
+  );
 
   return (
     <div className="scroll-wrapper" ref={galleryRef}>
       <section className="slider-section">
         <div className="scroll-container">
-          <div className="slide">
-            <div className="skew-group gallery">
-              {galleryImages1.map((gallery, i) => {
-                return (
-                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
-                );
-              })}
+          {groupedImages.map((group, index) => (
+            <div className="slide" key={index}>
+              <div className="skew-group gallery">
+                {group.map((image, i) => (
+                  <img key={i} src={image.imgSrc} alt={image.altTag} />
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="slide">
-            <div className="skew-group gallery">
-              {galleryImages2.map((gallery, i) => {
-                return (
-                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
-                );
-              })}
-            </div>
-          </div>
-          <div className="slide">
-            <div className="skew-group gallery">
-              {galleryImages3.map((gallery, i) => {
-                return (
-                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
-                );
-              })}
-            </div>
-          </div>
-          <div className="slide">
-            <div className="skew-group gallery">
-              {galleryImages4.map((gallery, i) => {
-                return (
-                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
-                );
-              })}
-            </div>
-          </div>
-          <div className="slide">
-            <div className="skew-group gallery">
-              {galleryImages5.map((gallery, i) => {
-                return (
-                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
-                );
-              })}
-            </div>
-          </div>
-          <div className="slide">
-            <div className="skew-group gallery">
-              {galleryImages6.map((gallery, i) => {
-                return (
-                  <img key={i} src={gallery.imgSrc} alt={gallery.altTag}></img>
-                );
-              })}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>

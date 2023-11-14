@@ -18,6 +18,8 @@ class MainAnimations {
   }
 
   _setInitialStates() {
+    let mm = gsap.matchMedia();
+
     gsap.registerPlugin(ScrollTrigger, Power3, Expo);
 
     gsap.set(".hero-title span, .text-effect p", {
@@ -25,9 +27,18 @@ class MainAnimations {
       opacity: 0,
     });
 
-    gsap.set(".hero-images img", {
-      opacity: 0,
-      y: gsap.utils.random(100, 50),
+    mm.add("(min-width: 999.1px)", () => {
+      gsap.set(".hero-images img", {
+        opacity: 0,
+        y: gsap.utils.random(100, 50),
+      });
+    });
+
+    mm.add("(max-width: 999px)", () => {
+      gsap.set(".hero-images img", {
+        opacity: 0,
+        clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
+      });
     });
   }
 
@@ -39,30 +50,56 @@ class MainAnimations {
 
   _createIntro() {
     const tl = gsap.timeline();
-
-    tl.to(".hero-title div", {
-      opacity: 1,
-    })
-      .to(".hero-title span", {
-        y: 0,
+    let mm = gsap.matchMedia();
+    mm.add("(min-width: 999.1px)", () => {
+      tl.to(".hero-title div", {
         opacity: 1,
-        ease: Expo.easeOut,
-        stagger: 0.03,
       })
-      .to(
-        ".hero-images img",
-        {
-          opacity: 1,
+        .to(".hero-title span", {
           y: 0,
-          ease: Power3.easeOut,
-          duration: 2,
-          stagger: 0.04,
-        },
-        "-=1"
-      );
+          opacity: 1,
+          ease: Expo.easeOut,
+          stagger: 0.03,
+        })
+        .to(
+          ".hero-images img",
+          {
+            opacity: 1,
+            y: 0,
+            ease: Power3.easeOut,
+            duration: 2,
+            stagger: 0.04,
+          },
+          "-=1"
+        );
+    });
+
+    mm.add("(max-width: 999px)", () => {
+      tl.to(".hero-title div", {
+        opacity: 1,
+      })
+        .to(".hero-title span", {
+          y: 0,
+          opacity: 1,
+          ease: Expo.easeOut,
+          stagger: 0.09,
+        })
+        .to(
+          ".hero-images img",
+          {
+            opacity: 1,
+            ease: Power3.easeOut,
+            duration: 2,
+            stagger: 0.3,
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          },
+          "-=1"
+        );
+    });
   }
 
   _createHero() {
+    let mm = gsap.matchMedia();
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".hero",
@@ -73,14 +110,16 @@ class MainAnimations {
     });
 
     this.heroImages.forEach((img) => {
-      tl.to(
-        img,
-        {
-          ease: "none",
-          yPercent: gsap.utils.random(-100, -50),
-        },
-        0
-      );
+      mm.add("(min-width: 999.1px)", () => {
+        tl.to(
+          img,
+          {
+            ease: "none",
+            yPercent: gsap.utils.random(-100, -50),
+          },
+          0
+        );
+      });
     });
   }
 
